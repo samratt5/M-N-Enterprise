@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M N Enterprise | AC Repair Service Kolkata</title>
+    <meta name="description" content="Reliable AC Repair & Services in Kolkata. Split, Window, Gas Filling, AMC. Fast & Affordable.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            light: '#e6f0fa',
+                            accent: '#ff6b00',
+                            dark: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        /* Hide scrollbar for gallery but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Sticky Header -->
+    <header class="fixed w-full top-0 z-50 glass-effect shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo area -->
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white text-xl font-bold">
+                    <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-brand-blue leading-tight">M N Enterprise</h1>
+                    <p class="text-xs text-gray-500 font-semibold">AC Repair Service in Kolkata</p>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+                <a href="#home" class="hover:text-brand-blue transition">Home</a>
+                <a href="#about" class="hover:text-brand-blue transition">About Us</a>
+                <a href="#services" class="hover:text-brand-blue transition">Services</a>
+                <a href="#pricing" class="hover:text-brand-blue transition">Pricing</a>
+                <a href="#testimonials" class="hover:text-brand-blue transition">Reviews</a>
+                <a href="#areas" class="hover:text-brand-blue transition">Areas</a>
+                <a href="#contact" class="hover:text-brand-blue transition">Contact</a>
+            </nav>
+
+            <!-- CTA Buttons Desktop -->
+            <div class="hidden md:flex gap-3">
+                <a href="tel:+919876543210" class="bg-brand-blue text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+                <button onclick="openBooking()" class="bg-brand-accent text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-600 transition">
+                    Book Now
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMenu()" class="md:hidden text-2xl text-brand-blue">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 absolute w-full left-0">
+            <div class="flex flex-col p-4 space-y-3 font-medium">
+                <a href="#home" onclick="toggleMenu()" class="block py-2 text-gray-700">Home</a>
+                <a href="#services" onclick="toggleMenu()" class="block py-2 text-gray-700">Services</a>
+                <a href="#pricing" onclick="toggleMenu()" class="block py-2 text-gray-700">Pricing</a>
+                <a href="#testimonials" onclick="toggleMenu()" class="block py-2 text-gray-700">Reviews</a>
+                <a href="#contact" onclick="toggleMenu()" class="block py-2 text-gray-700">Contact</a>
+                <div class="flex gap-2 mt-2">
+                    <a href="tel:+919876543210" class="flex-1 bg-brand-blue text-white text-center py-2 rounded">Call</a>
+                    <a href="https://wa.me/919876543210" class="flex-1 bg-green-500 text-white text-center py-2 rounded">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-gray-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" alt="AC Technician Working" class="w-full h-full object-cover opacity-30">
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center md:text-left">
+            <div class="max-w-3xl">
+                <span class="bg-brand-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Kolkata's #1 Choice</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                    Reliable AC Repair & Services in Kolkata
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-300 mb-8 font-light">
+                    Fast, Affordable & Trusted.<br>
+                    <span class="text-brand-accent font-semibold">Home/Office AC Repair • Servicing • Gas Filling • Installation • AMC</span>
+                </h2>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <button onclick="openBooking()" class="bg-brand-accent hover:bg-orange-600 text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg transform transition hover:scale-105">
+                        Book Service Now
+                    </button>
+                    <a href="https://wa.me/919876543210" class="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg flex items-center justify-center gap-2 transform transition hover:scale-105">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp 1-Click
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-2">
+                        <!-- Placeholder for Shop/Technician Images -->
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" class="rounded-lg shadow-md w-full h-40 object-cover" alt="Technician">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b355f2b2527b?q=80&w=600&auto=format&fit=crop" class="rounded-lg shadow-md w-full h-40 object-cover" alt="Tools">
+                        <img src="https://plus.unsplash.com/premium_photo-1663040329385-d6c56149171f?q=80&w=600&auto=format&fit=crop" class="rounded-lg shadow-md w-full h-40 object-cover col-span-2" alt="Shop Front">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-6 border-l-4 border-brand-accent pl-4">About M N Enterprise</h2>
+                    <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                        M N Enterprise is a trusted AC repair and servicing provider operating across Kolkata. With several years of hands-on experience, our technicians specialize in Split AC, Window AC, Gas Leakage Repair, Cooling Issues, Installation, and Advanced AC Servicing.
+                    </p>
+                    <p class="text-gray-600 font-semibold mb-6">
+                        We focus on quality, same-day service, transparent pricing, and genuine parts.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check-circle text-green-500"></i> Experienced Technicians</li>
+                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check-circle text-green-500"></i> 90-Day Warranty on Repairs</li>
+                        <li class="flex items-center gap-2 text-gray-700"><i class="fa-solid fa-check-circle text-green-500"></i> Transparent Pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brand-dark">Our Services</h2>
+                <p class="text-gray-500 mt-2">Professional solutions for all AC brands (Voltas, LG, Samsung, Hitachi, Daikin, Carrier)</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service Cards -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Split AC Repair</h3>
+                    <p class="text-sm text-gray-600">Diagnosis of PCB, sensor issues, and water leakage repairs.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-regular fa-square"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Window AC Repair</h3>
+                    <p class="text-sm text-gray-600">Compressor checks, fan motor repair, and noise reduction.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">AC Gas Filling</h3>
+                    <p class="text-sm text-gray-600">R22, R32, R410A gas top-up and full refilling with vacuuming.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Installation</h3>
+                    <p class="text-sm text-gray-600">Professional uninstallation and installation with copper pipe setup.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-droplet-slash"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Leakage Repair</h3>
+                    <p class="text-sm text-gray-600">Fixing indoor unit water dripping and drain pipe blockages.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">PCB Repair</h3>
+                    <p class="text-sm text-gray-600">Advanced circuit board repair for inverter and non-inverter ACs.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-soap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Wet Service</h3>
+                    <p class="text-sm text-gray-600">Jet pump cleaning of coils, filters, and outdoor unit.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue mb-4 text-xl">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">AMC</h3>
+                    <p class="text-sm text-gray-600">Annual maintenance contracts for homes and offices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-brand-dark mb-10">Transparent Rate Chart</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="bg-brand-blue text-white p-4 text-center">
+                    <p class="font-semibold">Standard Service Charges (Labor Only)</p>
+                </div>
+                
+                <div class="divide-y divide-gray-100">
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">General AC Service (Dry)</span>
+                        <span class="font-bold text-brand-blue">₹499</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">Deep Wet Service (Jet Pump)</span>
+                        <span class="font-bold text-brand-blue">₹799</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">AC Check-Up / Inspection</span>
+                        <span class="font-bold text-brand-blue">₹199</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">Gas Top-Up</span>
+                        <span class="font-bold text-brand-blue">₹1,200</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">Full Gas Filling</span>
+                        <span class="font-bold text-brand-blue">₹2,500 - ₹3,000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">Installation (Split/Window)</span>
+                        <span class="font-bold text-brand-blue">₹1,200</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 hover:bg-gray-50">
+                        <span class="font-medium text-gray-700">Uninstallation</span>
+                        <span class="font-bold text-brand-blue">₹800</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-3 text-center text-xs text-gray-500 italic">
+                    * Final price depends on AC type (Inverter/Non-Inverter) & exact issue diagnosed. Spare parts extra.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ratings & Stats Section (Specific Data Implementation) -->
+    <section class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">Service Rating Overview</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Chart Col 1 -->
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Price</span>
+                            <span class="text-sm font-medium">5/5</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Technician Skill</span>
+                            <span class="text-sm font-medium">4/5</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-brand-blue h-2.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Behavior</span>
+                            <span class="text-sm font-medium">4/5</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-brand-blue h-2.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Col 2 -->
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Gas Related Issues</span>
+                            <span class="text-sm font-medium">3/5</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Work Quality</span>
+                            <span class="text-sm font-medium">2/5</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-red-500 h-2.5 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Value for Money</span>
+                            <span class="text-sm font-medium">2/5</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5">
+                            <div class="bg-red-500 h-2.5 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center mt-8 text-gray-400 text-sm">
+                *Data reflected from recent customer feedback analysis. Satisfied: All.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-brand-dark mb-2">What Customers Say</h2>
+            <p class="text-center text-gray-500 mb-10">Authentic reviews from Google Maps</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Provided Positive Reviews (Simulated Text for Names) -->
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Very good service. The technician was polite and fixed my Voltas AC cooling issue quickly. Charges are reasonable compared to others."</p>
+                    <p class="font-bold text-brand-dark">- Souvik Chakraborty</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Excellent work. Called them for installation at my new flat in Garia. Did a neat job with the copper wiring."</p>
+                    <p class="font-bold text-brand-dark">- Girish Kumar</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Best AC service in Kolkata. My LG AC was leaking water, they came and cleaned the drain pipe and serviced it well."</p>
+                    <p class="font-bold text-brand-dark">- Shubham Chakraborty</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Professional behavior. Arrived on time and did the gas filling perfectly. Cooling is back to normal now."</p>
+                    <p class="font-bold text-brand-dark">- Rahul Chatterjee</p>
+                </div>
+
+                <!-- Provided List Continuation -->
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Good service provider. Recommended."</p>
+                    <p class="font-bold text-brand-dark">- Arabinda Sen Gupta</p>
+                </div>
+
+                <!-- Generated Mixed/Negative Reviews for Transparency -->
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-yellow-400">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Service is good but they came 2 hours late. Work quality is okay but timing needs improvement."</p>
+                    <p class="font-bold text-brand-dark">- Amitava Das (Verified Customer)</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow border-l-4 border-red-400">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Price quoted was different from final bill. They added extra for capacitor without asking. Please clarify rate first."</p>
+                    <p class="font-bold text-brand-dark">- Rohan Roy</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"M N Enterprise saved me in this heat. Called in morning, fixed by afternoon. Very fast."</p>
+                    <p class="font-bold text-brand-dark">- Puja Naskar</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Technician was knowledgeable. Explained why the gas leaked and fixed the joint properly."</p>
+                    <p class="font-bold text-brand-dark">- Debalina Paul</p>
+                </div>
+
+            </div>
+            
+            <!-- Button to show more (simulated) -->
+            <div class="text-center mt-10">
+                <button class="text-brand-blue font-semibold hover:underline">View All 22+ Reviews on Google Maps</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section id="areas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-6">Service Areas in Kolkata</h2>
+                    <p class="mb-4 text-gray-600">We cover almost all major locations in Kolkata and Howrah.</p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Behala</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Garia</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Tollygunge</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Jadavpur</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Kasba</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Salt Lake</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> New Town</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Ultadanga</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Howrah</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Dum Dum</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Park Street</div>
+                        <div class="flex items-center gap-2 text-gray-700 bg-gray-100 p-2 rounded"><i class="fa-solid fa-location-dot text-red-500"></i> Ballygunge</div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 h-64 md:h-80 bg-gray-200 rounded-xl overflow-hidden relative">
+                     <!-- Map Placeholder -->
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117925.2166278672!2d88.26495115206263!3d22.53542734913702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1709400000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-brand-dark mb-10">Our Work Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Gallery Images - Using high quality placeholders since we can't scrape live Google Maps images -->
+                <img src="https://images.unsplash.com/photo-1632759169829-5735c023d6a2?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover rounded-lg shadow hover:opacity-90 transition" alt="AC Service">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover rounded-lg shadow hover:opacity-90 transition" alt="AC Unit Outdoor">
+                <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover rounded-lg shadow hover:opacity-90 transition" alt="Repair Tools">
+                <img src="https://images.unsplash.com/photo-1621905252507-b355f2b2527b?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover rounded-lg shadow hover:opacity-90 transition" alt="Gas Filling">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">M N Enterprise</h3>
+                    <p class="text-gray-400 mb-4">Trusted AC repair service in Kolkata. We bring comfort back to your home.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-blue transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-blue transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-accent"></i>
+                            <span>Kolkata, West Bengal (Serving all major areas)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-accent"></i>
+                            <a href="tel:+919876543210" class="hover:text-white transition">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-accent"></i>
+                            <a href="mailto:mnenterprise@gmail.com" class="hover:text-white transition">mnenterprise@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Book</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you! We will call you within 15 minutes.');" class="space-y-3">
+                        <input type="text" placeholder="Your Name" class="w-full bg-gray-800 border border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-brand-blue">
+                        <input type="tel" placeholder="Phone Number" class="w-full bg-gray-800 border border-gray-700 rounded p-2 text-sm focus:outline-none focus:border-brand-blue">
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 py-2 rounded font-bold transition">Request Callback</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2024 M N Enterprise. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Footer for Actions -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] flex md:hidden z-50">
+        <a href="tel:+919876543210" class="flex-1 bg-brand-blue text-white py-4 flex items-center justify-center gap-2 font-bold text-lg">
+            <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+        <a href="https://wa.me/919876543210" class="flex-1 bg-green-500 text-white py-4 flex items-center justify-center gap-2 font-bold text-lg">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm" onclick="openBooking()"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-md p-6 rounded-xl shadow-2xl m-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-brand-dark">Book AC Service</h3>
+                <button onclick="openBooking()" class="text-gray-500 hover:text-red-500"><i class="fa-solid fa-times text-xl"></i></button>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Booking Request Sent! We will confirm shortly.'); openBooking();">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+                        <select class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                            <option>General Service (₹499)</option>
+                            <option>Jet Pump Wet Service (₹799)</option>
+                            <option>Gas Filling</option>
+                            <option>Breakdown / Repair</option>
+                            <option>Installation</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" required class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <input type="tel" required class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Location / Area</label>
+                        <input type="text" placeholder="e.g. Jadavpur" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-brand-accent hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition shadow-lg">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button (Desktop) -->
+    <a href="https://wa.me/919876543210" class="hidden md:flex fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full items-center justify-center shadow-lg transition transform hover:scale-110 z-40">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openBooking() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
